@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projecto JavaScript</title>
+    <link rel="stylesheet" href="Diseño.css">
 </head>
 <body>
     <h2>Notas Asignatura Front-End</h2>
@@ -11,15 +12,15 @@
     <form id="studentForm">
         <div>
             <label for="name">Nombre:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" oninvalid="this.setCustomValidity('El campo Nombre debe ser completado')" oninput="this.setCustomValidity('')" required>
         </div>
         <div>
             <label for="lastName">Apellido:</label>
-            <input type="text" id="lastName" required>
+            <input type="text" id="lastName" oninvalid="this.setCustomValidity('El campo Apellido debe ser completado')" oninput="this.setCustomValidity('')" required>
         </div>
         <div>
             <label for="grade">Nota:</label>
-            <input type="number" id="grade" step="0.1" min="1" max="7" required>
+            <input type="number" id="grade" step="0.1" min="1" max="7" oninvalid="this.setCustomValidity('El campo Nota debe ser completado')" oninput="this.setCustomValidity('')" required>
         </div>
         <button type="submit">Guardar</button>
     </form>
