@@ -28,8 +28,34 @@ function addStudentToTable(student){
     <td>${student.name}</td>
     <td>${student.lastName}</td>
     <td>${student.grade}</td>
+    <td> <button class='delete'>Eliminar</button> <button class='edit'>Editar</button> </td>
     `;
+
+row.querySelector(".delete").addEventListener("click",function(){
+    deleteEstudiante(student,row);
+});
+
+row.querySelector(".edit").addEventListener("click",function(){
+    editEstudiante(student,row);
+});
+
 tableBody.appendChild(row)
+}
+
+function deleteEstudiante(student,row){
+    const index=students.indexOf(student);
+    if(index > -1){
+        students.splice(index,1);
+        row.remove();
+        calcularPromedio();
+    }
+}
+
+function editEstudiante(student,row){
+    const index=students.indexOf(student);
+    if(index > -1){
+        
+    }
 }
 
 const promedio=document.getElementById("average")
