@@ -1,5 +1,7 @@
 const students=[];
 
+const valores = {}
+
 document.getElementById("studentForm").addEventListener("submit",function (e){
     e.preventDefault();
 
@@ -36,7 +38,7 @@ row.querySelector(".delete").addEventListener("click",function(){
 });
 
 row.querySelector(".edit").addEventListener("click",function(){
-    editEstudiante(student,row);
+    editEstudiante(student);
 });
 
 tableBody.appendChild(row)
@@ -51,11 +53,25 @@ function deleteEstudiante(student,row){
     }
 }
 
-function editEstudiante(student,row){
+const botonCambio = document.getElementById("botonG");
+
+function editEstudiante(student){
     const index=students.indexOf(student);
     if(index > -1){
-        
+        botonCambio.textContent="Editar";
+        valores = students[index];
+        document.getElementById("name").value = valores.name;
+        document.getElementById("lastName").value = valores.lastName;
+        document.getElementById("grade").value = valores.grade;
     }
+}
+
+function updateEstudiante(student,index){
+    valores.name = student.name
+    valores.lastName = student.lastName
+    valores.grade = student.grade
+    students.splice(index,1,{valores})
+    botonCambio.textContent="Guardar"
 }
 
 const promedio=document.getElementById("average")
