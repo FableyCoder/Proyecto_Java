@@ -28,6 +28,42 @@ h2{
     border-radius: 50%;
 }
 
+#total{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 15px;
+    border: 9px solid purple;
+    background-color: yellow;
+    max-width: fit-content;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+#examen{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 15px;
+    border: 9px solid purple;
+    background-color: yellow;
+    max-width: fit-content;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+#eximido{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 15px;
+    border: 9px solid purple;
+    background-color: yellow;
+    max-width: fit-content;
+    margin: 20px;
+    border-radius: 50%;
+}
+
 #studentForm{
     max-width: fit-content;
     margin: 20px 50px;
